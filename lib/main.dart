@@ -21,14 +21,27 @@ class Home extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 20),
-              Image.asset(
-                'assets/images/benjamin.jpg', // Ensure you have a profile picture in assets
-                width: 100,
-                height: 100,
+              Container(
+                decoration:
+                    BoxDecoration(), // Todo: Add decoration around image
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(75),
+                  child: Image.asset(
+                    'assets/images/benjamin.jpg',
+                    width: 150,
+                    height: 150,
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
               const Text(
                 'Benjamin Boswell',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: -2,
+                  color: Colors.blue,
+                ),
               ),
             ],
           ),
